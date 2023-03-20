@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- This is the head section of the HTML document containing important meta information -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Muladi Péter">
+        <title>Employee Admin Dashboard</title>
+        <!-- This is the section for importing external CSS stylesheets -->
+        <link rel="stylesheet" href="./style/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    </head>
+    <body class="p-2 m-auto" style="max-width:1400px">
+        <!-- This is the body section of the HTML document containing the main content -->
+        <div class="header-container">
+            <div class="row">
+                <!-- This is the header section containing a button and a heading -->
+                <div class="mt-5 d-flex justify-content-end ">
+                    <!-- Button for toggling between dark and light mode -->
+                    <button id="darkLightBtn" class="btn btn-danger m-2">
+                        <i class="bi bi-brightness-high"></i>
+                        Light Mode</button>
+                </div>
+                <h1 class="text-center display-4 jumbotron mb-3 mt-2">🚀Employee Admin Dashboard</h1>
+            </div>
+            <div class="search-container p-5 m-2 m-auto w-50">
+                <!-- This is the search bar section -->
+                <div class="input-group">
+                    <input class="form-control float-left" placeholder="search by name" type="search" oninput="liveSearch()" id="searchbox">
+                    <button id="searchButton" disabled type="button" class="btn btn-outline-success">
+                        <i class="bi bi-search"></i>
+                        Search Employee</button>
+                </div>
+                <ul id="myList" class="list-group"></ul>
+            </div>
+            <h1 class="text-center display-6 jumbotron mb-3" id="workersNumber"></h1>
+            <h1 class="text-center">
+                <!-- Button for adding a new employee -->
+                <button id="newEmployeeButton" class="btn btn-lg btn-primary text-white">Add New Employee
+                    <i class="bi bi-arrow-right-circle"></i>
+                </button>
+            </h1>
+        </div>
+        <div class="text-center m-0 p-0" id="alert"></div>
+        <div class="form-container">
+            <!-- This is the form section for adding a new employee -->
+            <div id="newEmployeeForm" class="form-container w-75 m-auto"></div>
+        </div>
+        <div class="employees-container">
+            <!-- This is the section for displaying all the employees -->
+            <div id="root" class="row"></div>
+        </div>
+        <!-- This is the section for importing the JavaScript file -->
+        <script src="./app.js"></script>
+    </body>
+</html>

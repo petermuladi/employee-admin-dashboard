@@ -1,4 +1,4 @@
-## 👨👩Employee Admin Dashboard
+# 👨👩Employee Admin Dashboard
 
 #### This is a simple Employee Admin Dashboard where you can view, add, edit, and delete employees. The application is built using HTML, CSS, and JavaScript, with the help of the Bootstrap framework.
 
